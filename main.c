@@ -20,10 +20,10 @@ int main()
     char continuar;
 
     do{
-        printf("Ingrese un numero entero: ");
+        printf("Ingrese un numero entero distinto de 0: ");
         scanf("%d",&numero);
         while (numero==0){
-            printf("Error. Ingrese un numero entero: ");
+            printf("Error. Ingrese un numero entero distinto de 0: ");
             scanf("%d",&numero);
         }
         //printf("\nUsted ingreso el: %d", numero);
