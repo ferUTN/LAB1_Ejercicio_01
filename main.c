@@ -22,7 +22,7 @@ int main()
     do{
         printf("Ingrese un numero entero: ");
         scanf("%d",&numero);
-        while (! (numero>-10 && numero <50) ){
+        while (numero==0){
             printf("Error. Ingrese un numero entero: ");
             scanf("%d",&numero);
         }
@@ -55,9 +55,9 @@ int main()
             cantPares++;
         }
 
-        // falta el rango
-
-
+        if(numero >= -10 || numero <=50){
+            cantRango++;
+        }
 
         //Limpio el buffer:
         scanf("%c",&continuar);
@@ -66,7 +66,19 @@ int main()
         scanf("%c",&continuar);
     }while(continuar=='s' || continuar=='S');
 
-
+    printf("\n");
+    printf("\nCant. nros. ingresados: %d", cantNumeros);
+    printf("\nCant. pares: %d", cantPares);
+    printf("\nSuma de los positivos: %d", sumaPos);
+    if(cantNeg>0){
+        printf("\nProm. de los negativos: %.2f", (float)sumaNeg/cantNeg);
+    }
+    printf("\nNumero mayor: %d", maximo);
+    printf("\nNumero menor: %d", minimo);
+    printf("\nMenor de los positivos: %d", minimoPos);
+    printf("\nMayor de los negativos: %d", maximoNeg);
+    printf("\nCantidad de -10 a 50: %d", cantRango);
+    printf("\nPromedio total: %.2f", (float)sumaNumeros/cantNumeros);
 
     return 0;
 }
